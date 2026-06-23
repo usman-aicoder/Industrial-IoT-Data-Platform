@@ -1,0 +1,31 @@
+{
+  "opcua": {
+    "url": "opc.tcp://localhost:49320",
+    "use_auth": false,
+    "username": "",
+    "password": ""
+  },
+  "mongodb": {
+    "uri": "mongodb+srv://<user>:<password>@cluster.mongodb.net/?retryWrites=true&w=majority",
+    "database": "machinedata",
+    "collection": "sensor_data"
+  },
+  "openai": {
+    "api_key": ""
+  },
+  "tags": [
+    {
+      "path": "ns=2;s=Channel1.Device1.Temperature",
+      "name": "Temperature",
+      "unit": "°C",
+      "description": "",
+      "min_range": 0,
+      "max_range": 100
+    }
+  ],
+  "monitoring": {
+    "poll_interval": 1,
+    "store_on_change_only": true,
+    "change_threshold": 0.01
+  }
+}
